@@ -29,7 +29,7 @@ def analyze():
     query = q.encode('ascii','ignore')
     event = query.split(" ")
     if(event[0] == "dash"):
-        print("in DASH-----------------------------------------------")
+        print("in DASH-----------------------------------------------", event)
         res = worker_serve(body)
     elif(event[0] == "ding"):
         print("in DING-----------------------------------------------")
@@ -43,6 +43,7 @@ def worker_serve(body):
     print("-----------------------------", body)
     q = body['result']['resolvedQuery']
     query = q.encode('ascii','ignore')
+    print("-----------------------iiiiiiiiiiiiiiiiiiiii------------------",query)
     event = query.split(" ")
     print ("Speech in Server ----------------------------......... ", query)
     res =    {
