@@ -54,7 +54,7 @@ def worker_serve(body):
     }
     my_email  = body['originalRequest']['data']['data']['personEmail'].encode('ascii','ignore')
     print("::::::::USER EMAIL::::::::::",my_email)
-    my_message = ("One of your colleague dashed for ")+str(event[1])+(". If interested ding them replying here saying DING")
+    my_message = ("A person. If interested ding them replying here saying DING")
     post_message(my_message, 1, event[1])
     room_name = str(event[1]) + str(randint(0, 999))
     staticroomid.roomid = create_room(room_name).encode('ascii','ignore')
