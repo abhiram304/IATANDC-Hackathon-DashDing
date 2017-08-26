@@ -108,7 +108,6 @@ def addParticipantsToRoom(roomId, email_addresses):
         for email in email_addresses:
             url = "https://api.ciscospark.com/v1/memberships"
             #stjr = "Y2lzY29zcGFyazovL3VzL1JPT00vNDhhMGE1ODAtODVkNy0xMWU3LTgyYTUtMDE0YjFmYzEzZTg5" 
-            #mail = "marupati.udaykiran@gmail.com"
             payload = "{\r\n  \"roomId\" : \""+str(roomId)+"\",\r\n  \"personEmail\": \""+str(email)+"\",\r\n  \"isModerator\": \"false\"\r\n}"
             headers = {
     'authorization': "Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi",
