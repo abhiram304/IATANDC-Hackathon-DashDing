@@ -59,7 +59,7 @@ def worker_serve(body):
     post_message(my_message, 1, event[1])
     room_name = str(event[1]) + str(randint(0, 999))
     staticroomid.roomid = create_room(room_name).encode('ascii','ignore')
-    f = open('room_id', 'w')
+    f = open('room_id1', 'w')
     f.write(staticroomid.roomid)  # python will convert \n to os.linesep
     f.close()
     print(":::::::::::::::ROOM ID::::::::;;;;;", staticroomid.roomid)
