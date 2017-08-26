@@ -1,6 +1,6 @@
 #!flask/bin/python
 from flask import request, render_template, Flask
-import db, os, spark, sys, json
+import os, spark,  json
 import requests
 app = Flask(__name__)
 
