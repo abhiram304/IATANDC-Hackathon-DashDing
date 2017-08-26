@@ -45,7 +45,7 @@ def worker_serve(body):
     query = q.encode('ascii','ignore')
     print("-----------------------iiiiiiiiiiiiiiiiiiiii------------------",query)
     event = query.split(" ")
-    print ("Speech in Server ----------------------------......... ", query)
+    print ("Speech in Server ----------------------------......... ", event)
     res =    {
     "speech": "Hello i've sent the request",
     "displayText": "Barack Hussein Obama II was the 44th and current President of the United States, and the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University   and Harvard Law School, where ",
@@ -80,7 +80,7 @@ def worker_serve_ding(body):
     "contextOut": [],
     "source": "DuckDuckGo"
     }
-    f = open('room_id','r')
+    f = open('room_id1','r')
     roomid = f.read()
     f.close()
     my_email  = body['originalRequest']['data']['data']['personEmail'].encode('ascii','ignore')
