@@ -9,9 +9,9 @@ from random import randint
 
 from ciscosparkapi import CiscoSparkAPI
 
-api = CiscoSparkAPI("ODIwYTkwNWEtMzBjMS00NTMzLWIyYTQtZDhiZjExZGMyODA1MTQzMDBjNDQtZTdl")
+api = CiscoSparkAPI("NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi")
 
-auth_code = 'Bearer ODIwYTkwNWEtMzBjMS00NTMzLWIyYTQtZDhiZjExZGMyODA1MTQzMDBjNDQtZTdl'
+auth_code = 'Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi'
 
 
 class staticroomid:
@@ -111,7 +111,7 @@ def addParticipantsToRoom(roomId, email_addresses):
             #mail = "marupati.udaykiran@gmail.com"
             payload = "{\r\n  \"roomId\" : \""+str(roomId)+"\",\r\n  \"personEmail\": \""+str(email)+"\",\r\n  \"isModerator\": \"false\"\r\n}"
             headers = {
-    'authorization': "Bearer ODIwYTkwNWEtMzBjMS00NTMzLWIyYTQtZDhiZjExZGMyODA1MTQzMDBjNDQtZTdl",
+    'authorization': "Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi",
     'content-type': "application/json",
     'cache-control': "no-cache",
     'postman-token': "7658b5dc-3a90-c4cf-9782-781a05d16eb1"
