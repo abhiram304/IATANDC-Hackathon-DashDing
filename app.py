@@ -118,7 +118,7 @@ def addParticipantsToRoom(roomId, email_addresses):
     }
             response = requests.request("POST", url, data=payload, headers=headers) 
             print(response.text)
-            #print("77777777777777777",r)
+            print("77777777777777777",r)
     except requests.HTTPError as e:
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", e)
 
