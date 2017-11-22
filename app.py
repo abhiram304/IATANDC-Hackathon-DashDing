@@ -8,10 +8,10 @@ from random import randint
 
 
 from ciscosparkapi import CiscoSparkAPI
-#NjM2NmExZGMtM2UyOS00MjM2LThmOWEtZDA4MTVhOTgzMmJmOTI0MmJkZDktYTEy
-api = CiscoSparkAPI("YjdlYWUxZDktMDNmMi00MmZjLTliMzMtZDhiNmI0ZDllY2IyMGIwNWU1NzAtNGIz")
-#ZTE2YTE4MzYtMTFlOC00MDBkLThkYmEtOGU3MGFjM2U5NjQ0MTc1NjIxYjEtYTNk
-auth_code = 'Bearer MTcwNzFmMGYtMjA1ZC00YjczLWE3MTktMDE1ZDFiMDRlNjgzM2Q4MWM1MmEtMmJl'
+
+api = CiscoSparkAPI("NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi")
+
+auth_code = 'Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi'
 
 
 class staticroomid:
@@ -40,12 +40,12 @@ def analyze():
     return json.dumps(res), 201
 
 def worker_serve(body):
-    print("------MAIN BODY WORKER SERVER _ DASHHHHH click--------", body)
+    print("-----------------------------", body)
     q = body['result']['resolvedQuery']
     query = q.encode('ascii','ignore')
     print("-----------------------iiiiiiiiiiiiiiiiiiiii------------------",query)
     event = query.split(" ")
-    print ("Speech in Server ----------------------------......... ", event[1])
+    print ("Speech in Server ----------------------------......... ", event[0])
     res =    {
     "speech": "Hello i've sent the request",
     "displayText": "Barack Hussein Obama II was the 44th and current President of the United States, and the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University   and Harvard Law School, where ",
@@ -55,7 +55,7 @@ def worker_serve(body):
     }
     my_email  = body['originalRequest']['data']['data']['personEmail'].encode('ascii','ignore')
     print("::::::::USER EMAIL::::::::::",my_email)
-    my_message = ("A person is interested to connect with you in "+event[1]+". If interested ding them replying here saying DING")
+    my_message = ("A person is interested to connect with you. If interested ding them replying here saying DING")
     post_message(my_message, 1, event[1])
     room_name = str(event[1]) + str(randint(0, 999))
     staticroomid.roomid = create_room(room_name).encode('ascii','ignore')
@@ -72,7 +72,7 @@ def worker_serve(body):
 
 
 def worker_serve_ding(body):
-    print("-----------------------------DINGED", body)
+    print("-----------------------------", body)
     res =    {
     "speech": "Thanks for your interest. You will be added to a spark chat room.",
     "displayText": "Thanks for your interest. You will be added to a spark chat room",
@@ -111,14 +111,14 @@ def addParticipantsToRoom(roomId, email_addresses):
             #stjr = "Y2lzY29zcGFyazovL3VzL1JPT00vNDhhMGE1ODAtODVkNy0xMWU3LTgyYTUtMDE0YjFmYzEzZTg5" 
             payload = "{\r\n  \"roomId\" : \""+str(roomId)+"\",\r\n  \"personEmail\": \""+str(email)+"\",\r\n  \"isModerator\": \"false\"\r\n}"
             headers = {
-    'authorization': "Bearer MTcwNzFmMGYtMjA1ZC00YjczLWE3MTktMDE1ZDFiMDRlNjgzM2Q4MWM1MmEtMmJl",
+    'authorization': "Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi",
     'content-type': "application/json",
     'cache-control': "no-cache",
     'postman-token': "7658b5dc-3a90-c4cf-9782-781a05d16eb1"
     }
             response = requests.request("POST", url, data=payload, headers=headers) 
-            print("response::::", response.text)
-            #print("77777777777777777")
+            print(response.text)
+            #print("77777777777777777",r)
     except requests.HTTPError as e:
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", e)
 
@@ -136,3 +136,4 @@ def web_hook():
 if __name__ == '__main__':
 	app.secret_key = os.urandom(12)
 	#app.run(debug=True)
+
