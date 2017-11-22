@@ -94,7 +94,7 @@ def post_message(message, noOfPeople, senderEmail):
 	emailList = ['abhiramreddy.salammagari@sjsu.edu']
 	for x in range(0, noOfPeople):
 		if emailList[x] != senderEmail:
-			api.messages.create(toPersonEmail=emailList[x], text=message)
+			api.messages.create(roomId="Y2lzY29zcGFyazovL3VzL1JPT00vMzBlMmI3YjItMDcxMC0zOGEwLWJmNGItZjhkZWYxNmY4ZDg5",toPersonEmail=emailList[x], text=message)
 
 def createMessage(toEmail, message):
 	api.messages.create(toPersonEmail=toEmail, text=message)
