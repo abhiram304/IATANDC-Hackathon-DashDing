@@ -72,7 +72,7 @@ def worker_serve(body):
 
 
 def worker_serve_ding(body):
-    print("-----------------------------", body)
+    print("-----------------------------DINGED", body)
     res =    {
     "speech": "Thanks for your interest. You will be added to a spark chat room.",
     "displayText": "Thanks for your interest. You will be added to a spark chat room",
