@@ -45,7 +45,7 @@ def worker_serve(body):
     query = q.encode('ascii','ignore')
     print("-----------------------iiiiiiiiiiiiiiiiiiiii------------------",query)
     event = query.split(" ")
-    print ("Speech in Server ----------------------------......... ", event[0])
+    print ("Speech in Server ----------------------------......... ", event[1])
     res =    {
     "speech": "Hello i've sent the request",
     "displayText": "Barack Hussein Obama II was the 44th and current President of the United States, and the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University   and Harvard Law School, where ",
@@ -55,7 +55,7 @@ def worker_serve(body):
     }
     my_email  = body['originalRequest']['data']['data']['personEmail'].encode('ascii','ignore')
     print("::::::::USER EMAIL::::::::::",my_email)
-    my_message = ("A person is interested to connect with you. If interested ding them replying here saying DING")
+    my_message = ("A person is interested to connect with you in "+event[1]+". If interested ding them replying here saying DING")
     post_message(my_message, 1, event[1])
     room_name = str(event[1]) + str(randint(0, 999))
     staticroomid.roomid = create_room(room_name).encode('ascii','ignore')
