@@ -45,7 +45,7 @@ def worker_serve(body):
     query = q.encode('ascii','ignore')
     print("-----------------------iiiiiiiiiiiiiiiiiiiii------------------",query)
     event = query.split(" ")
-    print ("Speech in Server ----------------------------......... ", event)
+    print ("Speech in Server ----------------------------......... ", event[0])
     res =    {
     "speech": "Hello i've sent the request",
     "displayText": "Barack Hussein Obama II was the 44th and current President of the United States, and the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University   and Harvard Law School, where ",
