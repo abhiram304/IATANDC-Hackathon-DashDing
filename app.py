@@ -111,7 +111,7 @@ def addParticipantsToRoom(roomId, email_addresses):
             #stjr = "Y2lzY29zcGFyazovL3VzL1JPT00vNDhhMGE1ODAtODVkNy0xMWU3LTgyYTUtMDE0YjFmYzEzZTg5" 
             payload = "{\r\n  \"roomId\" : \""+str(roomId)+"\",\r\n  \"personEmail\": \""+str(email)+"\",\r\n  \"isModerator\": \"false\"\r\n}"
             headers = {
-    'authorization': "Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi",
+    'authorization': "Bearer MTcwNzFmMGYtMjA1ZC00YjczLWE3MTktMDE1ZDFiMDRlNjgzM2Q4MWM1MmEtMmJl",
     'content-type': "application/json",
     'cache-control': "no-cache",
     'postman-token': "7658b5dc-3a90-c4cf-9782-781a05d16eb1"
