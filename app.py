@@ -11,9 +11,9 @@ from ciscosparkapi import CiscoSparkAPI
 
 api = CiscoSparkAPI("ZmZlNjZkZmEtMjY4NS00NjU5LTgzYjMtZWU5YzFkZGYyZmRhNjFiNzJlMjEtNjNi")
 #NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi
-auth_code = 'Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi'
+auth_code = 'Bearer ZmZlNjZkZmEtMjY4NS00NjU5LTgzYjMtZWU5YzFkZGYyZmRhNjFiNzJlMjEtNjNi'
 
-
+#Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi
 class staticroomid:
     roomid = 0
 #abc
@@ -111,7 +111,7 @@ def addParticipantsToRoom(roomId, email_addresses):
             #stjr = "Y2lzY29zcGFyazovL3VzL1JPT00vNDhhMGE1ODAtODVkNy0xMWU3LTgyYTUtMDE0YjFmYzEzZTg5" 
             payload = "{\r\n  \"roomId\" : \""+str(roomId)+"\",\r\n  \"personEmail\": \""+str(email)+"\",\r\n  \"isModerator\": \"false\"\r\n}"
             headers = {
-    'authorization': "Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi",
+    'authorization': "Bearer ZmZlNjZkZmEtMjY4NS00NjU5LTgzYjMtZWU5YzFkZGYyZmRhNjFiNzJlMjEtNjNi",
     'content-type': "application/json",
     'cache-control': "no-cache",
     'postman-token': "7658b5dc-3a90-c4cf-9782-781a05d16eb1"
