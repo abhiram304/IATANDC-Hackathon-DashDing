@@ -16,7 +16,7 @@ auth_code = 'Bearer NjMyN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgt
 
 class staticroomid:
     roomid = 0
-
+#abc
 @app.route('/')
 def index():
     return  "hello"
