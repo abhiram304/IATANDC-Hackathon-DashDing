@@ -8,9 +8,9 @@ from random import randint
 
 
 from ciscosparkapi import CiscoSparkAPI
+#NjM2NmExZGMtM2UyOS00MjM2LThmOWEtZDA4MTVhOTgzMmJmOTI0MmJkZDktYTEy
+api = CiscoSparkAPI("NjN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi")
 
-api = CiscoSparkAPI("NjM2NmExZGMtM2UyOS00MjM2LThmOWEtZDA4MTVhOTgzMmJmOTI0MmJkZDktYTEy")
-#NjN2U5ZjAtYmQ4My00ZGQ0LTllMzctNDMyYzg1YzRmYzA0NGNjY2YyYjgtMzZi
 auth_code = 'Bearer MTcwNzFmMGYtMjA1ZC00YjczLWE3MTktMDE1ZDFiMDRlNjgzM2Q4MWM1MmEtMmJl'
 
 
