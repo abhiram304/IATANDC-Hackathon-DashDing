@@ -91,7 +91,7 @@ def worker_serve_ding(body):
 
 
 def post_message(message, noOfPeople, senderEmail):
-	emailList = ['abhiramreddy.salammagari@sjsu.edu']
+	emailList = ['abhiram.304@gmail.com']
 	for x in range(0, noOfPeople):
 		if emailList[x] != senderEmail:
 			api.messages.create(toPersonEmail=emailList[x], text=message)
