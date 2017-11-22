@@ -117,8 +117,8 @@ def addParticipantsToRoom(roomId, email_addresses):
     'postman-token': "7658b5dc-3a90-c4cf-9782-781a05d16eb1"
     }
             response = requests.request("POST", url, data=payload, headers=headers) 
-            print(response.text)
-            print("77777777777777777",r)
+            print("response::::", response.text)
+            #print("77777777777777777")
     except requests.HTTPError as e:
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", e)
 
